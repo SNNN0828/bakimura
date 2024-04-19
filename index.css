@@ -1,0 +1,63 @@
+body {
+   background-color:#f6f5f4;
+   height:100%;
+   width:100%;
+}
+
+.side {
+  background-color:#d4eaff;
+  width:170px;
+  padding: 20px;
+  text-align:center;
+} 
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+} 
+
+
+.content {
+  background-color:#d4eaff;
+  width: calc(100% - 170px);;
+  margin-left:10px;/*サイドバーとメインコンテンツの間に隙間をあけた*/
+}
+
+.box {
+  background-color: aliceblue;
+  border:1px solid #000;
+  width: 90%;
+  padding: 10px;
+  margin-left:10px;/*サイドバーとメインコンテンツの間に隙間をあけた*/
+}
+
+.resizeimage img { 
+  width: 100%; 
+  min-width: 965px;
+}
+
+.storyimg img { 
+  width: 97%; 
+  padding: 10px;
+  min-width: 500px;
+}
+
+article {
+  display:flex;/*サイドバーとメインコンテンツを横並びにする指定をした*/
+  width:100%;
+}
+
+.time{
+  display:flex;/*サイドバーとメインコンテンツを横並びにする指定をした*/
+  gap: 100px;
+  width:100%;
+}
+
+.storynum{
+  display:flex;/*サイドバーとメインコンテンツを横並びにする指定をした*/
+  gap: 5px;
+}
+
+.block {
+  display:block;
+}
