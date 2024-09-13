@@ -33,7 +33,7 @@ body {
 
 .resizeimage img { 
   width: 100%; 
-  min-width: 965px;
+  min-width: 100px;
 }
 
 .storyimg img { 
