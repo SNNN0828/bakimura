@@ -51,23 +51,24 @@ article {
   margin-left: 10px;
 }
 
-/* ===== 画像の統一サイズ (キャラ一覧・個別ページ共通) ===== */
-.char-img {
-  height: 350px; /* キャラ画像の高さ統一 */
+/* ===== キャラ画像のサイズを統一 (一覧ページ) ===== */
+.character-item img.char-img {
+  max-height: 150px; /* キャラ一覧ページの画像サイズを制限 */
   object-fit: contain;
   display: block;
-  margin-bottom: 10px;
+  margin: 0 auto;
 }
 
-/* ===== キャラ個別ページのレイアウト (左寄せ) ===== */
+/* ===== キャラ個別ページのレイアウト (左寄せ & 画像サイズ調整) ===== */
 .character-profile {
   display: flex;
   gap: 20px;
   align-items: flex-start; /* 上揃え + 左寄せ */
 }
 
-/* キャラ画像を左に配置 */
 .character-profile img {
+  max-height: 300px; /* キャラ個別ページの画像を大きくする */
+  object-fit: contain;
   flex-shrink: 0; /* 画像のサイズを固定 */
 }
 
@@ -87,35 +88,21 @@ article {
   text-align: center;
 }
 
-/* キャラの画像サイズを統一 */
-.character-item img.char-img {
-  height: 150px;
-  object-fit: contain;
-}
-
-/* ===== キャラAの文字が青くならないように修正 ===== */
-.character-item a {
-  text-decoration: none;
-  color: #000; /* 黒に統一 */
-}
-
-.character-item a:hover {
-  color: #555; /* ホバー時に少し変化 */
-}
-
+/* キャラ名の位置調整 */
 .character-item p {
   margin-top: 5px;
   font-weight: bold;
+  text-align: center;
 }
 
 /* ===== ストーリー画像のサイズ調整 (縮小 & 左揃え) ===== */
 .storyimg img {
-  width: 100%; /* 画像サイズを少し縮小 */
-  max-width: 800px; /* 最大幅を設定 */
-  min-width: 350px; /* 最小幅を設定 */
+  width: 50%; /* 画像サイズを調整 */
+  max-width: 500px; /* 最大幅を設定 */
+  min-width: 250px; /* 最小幅を設定 */
   padding: 10px;
   display: block;
-  margin-left: 0; /* 左寄せ */
+  margin-left: 0; /* 左揃え */
 }
 
 /* ===== 「キャラ一覧に戻る」ボタン ===== */
