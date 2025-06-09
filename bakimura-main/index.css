@@ -1,0 +1,155 @@
+/* ===== 基本設定 ===== */
+body {
+  background-color: #f6f5f4;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== レイアウト全体 (タスクバー + メインコンテンツ) ===== */
+article {
+  display: flex;
+  width: 100%;
+}
+
+/* ===== サイドバー (タスクバー) ===== */
+.side {
+  background-color: #d4eaff;
+  width: 170px;
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar h3 a {
+  text-decoration: underline; /* 下線を追加 */
+  color: #000;
+  font-weight: bold;
+}
+
+.sidebar h3 a:hover {
+  color: #555;
+}
+
+/* ===== メインコンテンツ (右側の大きい部分) ===== */
+.content {
+  background-color: #d4eaff;
+  width: calc(100% - 170px);
+  margin-left: 10px;
+}
+
+/* ===== 各ボックスの見た目統一 ===== */
+.box {
+  background-color: aliceblue;
+  border: 1px solid #000;
+  width: 90%;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+/* ===== 画像の統一サイズ (キャラ一覧・個別ページ共通) ===== */
+.char-img {
+  height: 350px; /* キャラ画像の高さ統一 */
+  object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ===== キャラ個別ページのレイアウト (左寄せ) ===== */
+.character-profile {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* 上揃え + 左寄せ */
+}
+
+/* キャラ画像を左に配置 */
+.character-profile img {
+  flex-shrink: 0; /* 画像のサイズを固定 */
+}
+
+/* キャラ情報のテキストを左寄せ */
+.character-info {
+  text-align: left;
+}
+
+/* ===== キャラ一覧 (画像+名前表示) ===== */
+.character-list {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* 左揃え */
+}
+
+.character-item {
+  text-align: center;
+}
+
+/* キャラの画像サイズを統一 */
+.character-item img.char-img {
+  height: 150px;
+  object-fit: contain;
+}
+
+/* ===== キャラAの文字が青くならないように修正 ===== */
+.character-item a {
+  text-decoration: none;
+  color: #000; /* 黒に統一 */
+}
+
+.character-item a:hover {
+  color: #555; /* ホバー時に少し変化 */
+}
+
+.character-item p {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* ===== ストーリー画像のサイズ調整 (縮小 & 左揃え) ===== */
+.storyimg img {
+  width: 100%; /* 画像サイズを少し縮小 */
+  max-width: 800px; /* 最大幅を設定 */
+  min-width: 350px; /* 最小幅を設定 */
+  padding: 10px;
+  display: block;
+  margin-left: 0; /* 左寄せ */
+}
+
+/* ===== 「キャラ一覧に戻る」ボタン ===== */
+.back-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d4eaff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.back-button a:hover {
+  background-color: #b0c4de;
+}
+
+/* ===== タスクバーのアイコンが横並びになるように調整 ===== */
+.storynum {
+  display: flex;
+  column-gap: 5px;
+}
+
+.time {
+  display: flex;
+  column-gap: 100px;
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
