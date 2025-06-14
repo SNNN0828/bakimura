@@ -6,20 +6,27 @@ body {
   font-family: Arial, sans-serif;
 }
 
+h1 {
+  font-size: 36px;
+  text-align: center;
+  background: linear-gradient(90deg, #177bff, #002261);
+  background-clip: text;
+  color: transparent;
+}
+
 /* ===== レイアウト全体 (タスクバー + メインコンテンツ) ===== */
 article {
   display: flex;
   max-width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
   min-height: 100vh;
 }
 
 /* ===== メインコンテンツ (右側の大きい部分) ===== */
 .content {
-  background-color: #d4eaff;
+  background: linear-gradient(120deg, #e7f6ff, #d5e7ff);
   width: calc(100% - 170px);
   margin-left: 10px;
+  min-width: 540px;
   padding: 10px;
 }
 
@@ -27,6 +34,7 @@ article {
 .box {
   background-color: aliceblue;
   border: 1px solid #4d4fe4;
+  min-width: 500px;
   padding: 10px;
   margin-right: 10px;
   margin-left: 10px;
@@ -34,7 +42,7 @@ article {
 
 /* ===== サイドバー (タスクバー) ===== */
 .side {
-  background-color: #d4eaff;
+  background: linear-gradient(120deg, #e7f6ff, #d5e7ff);
   width: 170px;
   padding: 10px;
   text-align: left;
@@ -81,6 +89,7 @@ article {
 }
 
 .image-button img{
+  width: 45px;
   transition: 0.3s ease; /* なめらかに変化 */
 }
 
@@ -93,8 +102,8 @@ article {
 .character-profile {
   display: flex;
   gap: 20px;
+  min-width: 500px;
   align-items: flex-start;
-  justify-content: flex-start;
 }
 
 /* キャラ個別ページの画像サイズ */
@@ -102,6 +111,11 @@ article {
   max-height: 300px;
   object-fit: contain;
   flex-shrink: 0;
+}
+
+.character-center {
+  display: flex;
+  justify-content: center; /* 中央配置 */
 }
 
 /* キャラ情報のテキスト配置 */
@@ -113,8 +127,13 @@ article {
 /* ===== キャラ一覧のレイアウト ===== */
 .character-list {
   display: flex;
-  gap: 15px;
+  min-width: 500px;
   justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.character-list a{
+  margin: 3px;
 }
 
 /* キャラ名の位置調整 */
@@ -131,6 +150,13 @@ article {
   margin: 0 auto;
 }
 
+/* ストーリー画像と説明文を縦並び　*/
+.story-box {
+  display: flex;
+  flex-direction: column; /* 縦並びにする */
+  align-items: center; /* 画像を中央配置 */
+}
+
 /* ===== ストーリー画像のサイズ調整 (縮小 & 左揃え) ===== */
 .storyimg img {
   width: 100%;
@@ -138,13 +164,18 @@ article {
   min-width: 500px;
   height: auto;
   object-fit: contain;
-  display: block;
-  margin-left: 0;
+}
+
+.story-description {
+  width: 100%;
+  max-width: 800px;
+  min-width: 500px;
+  text-align: left; /* 説明文を左揃え */
 }
 
 /* ===== 「キャラ一覧に戻る」ボタン ===== */
 .back-button {
-  text-align: left;
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -153,13 +184,19 @@ article {
 /* ===== タスクバーのアイコンが横並びになるように調整 ===== */
 .storynum {
   display: flex;
-  column-gap: 5px;
+  justify-content: center; /* 画像を横方向に中央配置 */
+  margin-bottom: 10px;
+}
+
+.storynum a {
+  margin: 2px;
 }
 
 /* ON AIR用の表示 */
 .time {
   display: flex;
-  column-gap: 80px;
+  column-gap: 5px;
+  flex-direction: row;
   width: 100%;
 }
 
