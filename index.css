@@ -1,15 +1,18 @@
 /* ===== 基本設定 ===== */
 body {
   background-color: #f6f5f4;
-  height: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
 }
 
 /* ===== レイアウト全体 (タスクバー + メインコンテンツ) ===== */
 article {
   display: flex;
-  width: 100%;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 100vh;
 }
 
 /* ===== メインコンテンツ (右側の大きい部分) ===== */
@@ -17,16 +20,15 @@ article {
   background-color: #d4eaff;
   width: calc(100% - 170px);
   margin-left: 10px;
-  margin-right: 10px;
-  padding-left: 10px;
+  padding: 10px;
 }
 
 /* ===== 各ボックスの見た目統一 (Story等)===== */
 .box {
   background-color: aliceblue;
-  border: 1px solid #0608b3;
+  border: 1px solid #4d4fe4;
   padding: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-left: 10px;
 }
 
@@ -159,4 +161,10 @@ article {
   display: flex;
   column-gap: 80px;
   width: 100%;
+}
+
+.main-img {
+  width: 100%;
+  min-width: 700px;
+  height: auto;
 }
