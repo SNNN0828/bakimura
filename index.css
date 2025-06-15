@@ -38,6 +38,7 @@ article {
   padding: 10px;
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 /* ===== サイドバー (タスクバー) ===== */
@@ -192,16 +193,20 @@ article {
   margin: 2px;
 }
 
-/* ON AIR用の表示 */
-.time {
-  display: flex;
-  column-gap: 5px;
-  flex-direction: row;
-  width: 100%;
-}
-
 .main-img {
   width: 100%;
   min-width: 700px;
   height: auto;
 }
+
+.onair-row {
+  display: flex;
+  align-items: baseline; /* テキストの下線を揃える*/
+  margin-bottom: 12px;
+}
+
+.onair-time dt {
+  width: 250px; /* 固定幅にすると横位置が安定する */
+  font-weight: bold;
+}
+
