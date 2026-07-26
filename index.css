@@ -151,6 +151,22 @@ article {
   margin: 0 auto;
 }
 
+.character-group{
+    border:3px solid #555;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:40px;
+    background:#111;
+}
+
+.character-group h2{
+    margin-top:0;
+    margin-bottom:20px;
+    color:white;
+    border-left:8px solid crimson;
+    padding-left:12px;
+}
+
 /* ストーリー画像と説明文を縦並び　*/
 .story-box {
   display: flex;
